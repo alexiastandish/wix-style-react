@@ -81,12 +81,11 @@ const TableListItem = ({
             />
           </div>
         )}
-        <Box
+        <div
           className={styles.optionsContainer}
           style={{
             gridTemplateColumns: getWidthStyle(options),
           }}
-          verticalAlign="middle"
           dataHook={dataHooks.tableListItemOptionsContainer}
         >
           {options.map(({ value, align }, index) => (
@@ -98,7 +97,7 @@ const TableListItem = ({
               {value}
             </div>
           ))}
-        </Box>
+        </div>
       </Box>
     </div>
   );

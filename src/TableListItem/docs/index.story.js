@@ -89,7 +89,7 @@ export default {
           example({
             title: 'Columns',
             description:
-              'Component content allows to have any number of data columns, which width can be specified either in % or pixels.',
+              'Component content allows to have any number of data columns, which width can be specified either in %, fr or pixels.',
             source: ColumnsExampleRaw,
           }),
 
