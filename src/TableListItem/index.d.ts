@@ -9,7 +9,7 @@ export type TableListItemColumn = {
 export interface TableListItemProps {
   dataHook?: string;
   className?: string;
-  onClick?: Function;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   options: TableListItemColumn[];
   verticalPadding?: 'small' | 'medium';
   checkbox?: boolean;

@@ -117,17 +117,14 @@ TableListItem.propTypes = {
     PropTypes.shape({
       value: PropTypes.node.isRequired,
       width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      align: PropTypes.oneOf([ALIGN.left, ALIGN.center, ALIGN.right]),
+      align: PropTypes.oneOf(['left', 'center', 'right']),
     }),
   ).isRequired,
 
   /**
     Extra space on top and bottom of list item
    */
-  verticalPadding: PropTypes.oneOf([
-    VERTICAL_PADDING.medium,
-    VERTICAL_PADDING.small,
-  ]),
+  verticalPadding: PropTypes.oneOf(['medium', 'small']),
 
   /**
     Show checkbox
@@ -172,7 +169,7 @@ TableListItem.propTypes = {
 
 TableListItem.defaultProps = {
   onCheckboxChange: () => {},
-  verticalPadding: VERTICAL_PADDING.medium,
+  verticalPadding: 'medium',
   checkbox: false,
   draggable: false,
   showDivider: false,
