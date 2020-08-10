@@ -28,7 +28,9 @@ import allComponents from '../../../stories/utils/allComponents';
 import TableListItem from '..';
 
 import { VERTICAL_PADDING } from '../TableListItem';
-import Button from '../../Button';
+import TableActionCell from '../../TableActionCell';
+import { Star, Download, Duplicate, Print } from 'wix-ui-icons-common';
+import Image from '../../Image';
 
 const example = config => baseExample({ components: allComponents, ...config });
 
@@ -55,9 +57,46 @@ export default {
       sourceUrl: `https://github.com/wix/wix-style-react/tree/master/src/${TableListItem.displayName}/`,
       component: (
         <TableListItem
+          draggable
+          checkbox
           options={[
-            { value: 'TableListItem' },
-            { value: <Button>Click me</Button>, width: '30%', align: 'right' },
+            { value: <Image height="60" width="100" />, width: 124 },
+            { value: 'Personal Finance' },
+            { value: '7 posts' },
+            { value: 'Last update on 27 April 2020' },
+            {
+              value: (
+                <TableActionCell
+                  secondaryActions={[
+                    {
+                      text: 'Star',
+                      icon: <Star />,
+                      onClick: () => window.alert('Star action was triggered.'),
+                    },
+                    {
+                      text: 'Download',
+                      icon: <Download />,
+                      onClick: () =>
+                        window.alert('Download action was triggered.'),
+                    },
+                    {
+                      text: 'Duplicate',
+                      icon: <Duplicate />,
+                      onClick: () =>
+                        window.alert('Duplicate action was triggered.'),
+                    },
+                    {
+                      text: 'Print',
+                      icon: <Print />,
+                      onClick: () =>
+                        window.alert('Print action was triggered.'),
+                    },
+                  ]}
+                  numOfVisibleSecondaryActions={2}
+                />
+              ),
+              align: 'right',
+            },
           ]}
         />
       ),
