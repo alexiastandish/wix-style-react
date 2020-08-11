@@ -137,7 +137,7 @@ export const listItemSectionBuilder = ({
 }) => ({
   id,
   overrideStyle: true,
-  title: true,
+  title: type === TYPES.DIVIDER,
   value: props => (
     <ListItemSection
       className={className}
