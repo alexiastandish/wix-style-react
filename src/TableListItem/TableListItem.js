@@ -86,7 +86,7 @@ const TableListItem = ({
           style={{
             gridTemplateColumns: getWidthStyle(options),
           }}
-          dataHook={dataHooks.tableListItemOptionsContainer}
+          data-hook={dataHooks.tableListItemOptionsContainer}
         >
           {options.map(({ value, align }, index) => (
             <div
